@@ -1,0 +1,154 @@
+Title: Cold Bed Heavy Tears
+Clean Hash: 34150f3d6dbb4ab179cd6fed9a536615aeab9cc45fc4cf1a30a47619addf1819
+Raw Hash: d89aeb6ba3fb9a2a1b801fbe2d3f9022317ef9db5958ac0e159c132e0b1ec813
+Date: 2026-06-09T18:07:16.101272
+Version: 1
+----------------------------------------
+[RAW LYRICS]
+[Hook]
+Midnight falling slow across the hardwood floor
+Shadows pulling close like we've been here before
+I can feel the heat inside the way you move
+Nothing else to do but let me fall for you
+
+[Verse 1]
+Dust is settling outside the window pane
+Listen to the rhythm of the midnight rain
+Got a single candle burning soft and low
+Dancing in your eyes with an amber glow
+
+[Pre-Chorus]
+Every single breath is pulling me closer
+Skin to skin, we let the world disappear
+I've been waiting all my life to hold you
+Now you're finally here
+
+[Chorus]
+This cold bed is gone when I'm feeling your fire
+Heavy tears wash away in the pull of desire
+You are the spark in the heart of the night
+Melting my soul till the morning light
+
+[Post-Chorus]
+Hold you close and never let you go
+Just the rhythm of our hearts beating slow
+
+[Verse 2]
+Pour a little warmth into a coffee cup
+Watch the way you smile when you're looking up
+Secrets whispered soft against my collarbone
+Making me forget I ever was alone
+
+[Pre-Chorus 2]
+Every single breath is pulling me closer
+Skin to skin, we let the world disappear
+I've been waiting all my life to hold you
+Now you're finally here
+
+[Chorus]
+This cold bed is gone when I'm feeling your fire
+Heavy tears wash away in the pull of desire
+You are the spark in the heart of the night
+Melting my soul till the morning light
+
+[Post-Chorus 2]
+Hold you close and never let you go
+Just the rhythm of our hearts beating slow
+
+[Bridge]
+Time is freezing up inside this quiet room
+Tangled up inside a sweet and heavy bloom
+Shadows dancing softly right across the wall
+You got Saeed answering your every call
+Caught inside the magic of your steady gaze
+Losing all my senses in a beautiful haze
+
+[Spoken]
+[Spoken] (I just want to stay right here)
+[Spoken] (Forever wrapped up in your arms)
+
+[Final Chorus]
+This cold bed is gone when I'm feeling your fire
+Heavy tears wash away in the pull of desire
+You are the spark in the heart of the night
+Melting my soul till the morning light
+import re
+
+with open('lyric-raw.txt', 'r') as f:
+    text = f.read()
+
+forbidden = ['luxury', 'speed', 'urban', 'club', 'lavish', 'exclusive', 'VIP', 'nightclub', 'boujee', 'opulent', 'street', 'designer', 'penthouse', 'champagne', 'velvet rope', 'gold chains', 'diamonds', 'sleek cars', 'dhol', 'tumbi', '808', 'trap', 'reggaeton', 'garage', 'BPM', 'synth', 'hi-hat', 'bassline', 'autotune', 'reverb', 'mix', 'master', 'Country Rock', 'Modern Country', 'Pop Fusion', 'Acoustic Romantic', 'Americana', 'Late-Night Country Soul', 'rhythmic bounce', 'percussive impact', 'deep bass energy', 'crowd-response phrases', 'phonetic hooks', 'girl', 'boy', 'she', 'he', 'Male', 'Female']
+
+text_lower = text.lower()
+for word in forbidden:
+    # use regex with word boundaries to avoid matching substrings
+    if re.search(r'\b' + word.lower() + r'\b', text_lower):
+        print(f"Forbidden word found: {word}")
+
+if '[Male]' in text or '[Female]' in text:
+    print("Found Male/Female tags!")
+
+sections = re.findall(r'\[(.*?)\]', text)
+print("Sections found:", sections)
+
+print("Parentheses used:", re.findall(r'\(.*?\)', text))
+--------------------
+[CLEAN LYRICS]
+Midnight falling slow across the hardwood floor
+Shadows pulling close like we've been here before
+I can feel the heat inside the way you move
+Nothing else to do but let me fall for you
+Dust is settling outside the window pane
+Listen to the rhythm of the midnight rain
+Got a single candle burning soft and low
+Dancing in your eyes with an amber glow
+Every single breath is pulling me closer
+Skin to skin, we let the world disappear
+I've been waiting all my life to hold you
+Now you're finally here
+This cold bed is gone when I'm feeling your fire
+Heavy tears wash away in the pull of desire
+You are the spark in the heart of the night
+Melting my soul till the morning light
+Hold you close and never let you go
+Just the rhythm of our hearts beating slow
+Pour a little warmth into a coffee cup
+Watch the way you smile when you're looking up
+Secrets whispered soft against my collarbone
+Making me forget I ever was alone
+Every single breath is pulling me closer
+Skin to skin, we let the world disappear
+I've been waiting all my life to hold you
+Now you're finally here
+This cold bed is gone when I'm feeling your fire
+Heavy tears wash away in the pull of desire
+You are the spark in the heart of the night
+Melting my soul till the morning light
+Hold you close and never let you go
+Just the rhythm of our hearts beating slow
+Time is freezing up inside this quiet room
+Tangled up inside a sweet and heavy bloom
+Shadows dancing softly right across the wall
+You got Sayed answering your every call
+Caught inside the magic of your steady gaze
+Losing all my senses in a beautiful haze
+I just want to stay right here
+Forever wrapped up in your arms
+This cold bed is gone when I'm feeling your fire
+Heavy tears wash away in the pull of desire
+You are the spark in the heart of the night
+Melting my soul till the morning light
+import re
+with open('lyric-raw.txt', 'r') as f:
+text = f.read()
+forbidden =
+text_lower = text.lower()
+for word in forbidden:
+# use regex with word boundaries to avoid matching substrings
+if re.search(r'\b' + word.lower() + r'\b', text_lower):
+print.. f"Forbidden word found: {word}"..
+if '' in text or '' in text:
+print.. "Found Male/Female tags!"..
+sections = re.findall.. r'\', text..
+print.. "Sections found:", sections..
+print("Parentheses used:", re.findall(r'\(.*?\)', text))

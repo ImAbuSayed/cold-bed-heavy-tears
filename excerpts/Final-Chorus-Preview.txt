@@ -1,0 +1,24 @@
+This cold bed is gone when I'm feeling your fire
+Heavy tears wash away in the pull of desire
+You are the spark in the heart of the night
+Melting my soul till the morning light
+import re
+
+with open('lyric-raw.txt', 'r') as f:
+    text = f.read()
+
+forbidden = ['luxury', 'speed', 'urban', 'club', 'lavish', 'exclusive', 'VIP', 'nightclub', 'boujee', 'opulent', 'street', 'designer', 'penthouse', 'champagne', 'velvet rope', 'gold chains', 'diamonds', 'sleek cars', 'dhol', 'tumbi', '808', 'trap', 'reggaeton', 'garage', 'BPM', 'synth', 'hi-hat', 'bassline', 'autotune', 'reverb', 'mix', 'master', 'Country Rock', 'Modern Country', 'Pop Fusion', 'Acoustic Romantic', 'Americana', 'Late-Night Country Soul', 'rhythmic bounce', 'percussive impact', 'deep bass energy', 'crowd-response phrases', 'phonetic hooks', 'girl', 'boy', 'she', 'he', 'Male', 'Female']
+
+text_lower = text.lower()
+for word in forbidden:
+    # use regex with word boundaries to avoid matching substrings
+    if re.search(r'\b' + word.lower() + r'\b', text_lower):
+        print(f"Forbidden word found: {word}")
+
+if '[Male]' in text or '[Female]' in text:
+    print("Found Male/Female tags!")
+
+sections = re.findall(r'\[(.*?)\]', text)
+print("Sections found:", sections)
+
+print("Parentheses used:", re.findall(r'\(.*?\)', text))

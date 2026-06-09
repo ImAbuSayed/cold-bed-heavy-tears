@@ -32,7 +32,10 @@
 
 ## 📝 Lyric Preview
 
-> [Excerpt will appear here after the final lyric is saved.]
+> Midnight falling slow across the hardwood floor
+> Shadows pulling close like we've been here before
+> I can feel the heat inside the way you move
+> Nothing else to do but let me fall for you
 > ...
 
 [**View Full Lyrics**](./lyrics.txt) | [**View Metadata**](./manifest.json) | [**View Proofs**](./hashes.txt)

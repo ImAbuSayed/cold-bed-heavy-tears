@@ -1,1 +1,58 @@
-[Clean lyric will be pushed here]
+Midnight falling slow across the hardwood floor
+Shadows pulling close like we've been here before
+I can feel the heat inside the way you move
+Nothing else to do but let me fall for you
+Dust is settling outside the window pane
+Listen to the rhythm of the midnight rain
+Got a single candle burning soft and low
+Dancing in your eyes with an amber glow
+Every single breath is pulling me closer
+Skin to skin, we let the world disappear
+I've been waiting all my life to hold you
+Now you're finally here
+This cold bed is gone when I'm feeling your fire
+Heavy tears wash away in the pull of desire
+You are the spark in the heart of the night
+Melting my soul till the morning light
+Hold you close and never let you go
+Just the rhythm of our hearts beating slow
+Pour a little warmth into a coffee cup
+Watch the way you smile when you're looking up
+Secrets whispered soft against my collarbone
+Making me forget I ever was alone
+Every single breath is pulling me closer
+Skin to skin, we let the world disappear
+I've been waiting all my life to hold you
+Now you're finally here
+This cold bed is gone when I'm feeling your fire
+Heavy tears wash away in the pull of desire
+You are the spark in the heart of the night
+Melting my soul till the morning light
+Hold you close and never let you go
+Just the rhythm of our hearts beating slow
+Time is freezing up inside this quiet room
+Tangled up inside a sweet and heavy bloom
+Shadows dancing softly right across the wall
+You got Sayed answering your every call
+Caught inside the magic of your steady gaze
+Losing all my senses in a beautiful haze
+I just want to stay right here
+Forever wrapped up in your arms
+This cold bed is gone when I'm feeling your fire
+Heavy tears wash away in the pull of desire
+You are the spark in the heart of the night
+Melting my soul till the morning light
+import re
+with open('lyric-raw.txt', 'r') as f:
+text = f.read()
+forbidden =
+text_lower = text.lower()
+for word in forbidden:
+# use regex with word boundaries to avoid matching substrings
+if re.search(r'\b' + word.lower() + r'\b', text_lower):
+print.. f"Forbidden word found: {word}"..
+if '' in text or '' in text:
+print.. "Found Male/Female tags!"..
+sections = re.findall.. r'\', text..
+print.. "Sections found:", sections..
+print("Parentheses used:", re.findall(r'\(.*?\)', text))
